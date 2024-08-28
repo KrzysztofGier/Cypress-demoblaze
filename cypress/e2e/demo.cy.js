@@ -18,7 +18,7 @@ describe('Registration Test', () => {
       const randomUsername = `user_${Math.random().toString(36).substring(2, 8)}`;
       const randomPassword = `pass_${Math.random().toString(36).substring(2, 8)}`;
       cy.visit('https://www.demoblaze.com/');
-      cy.get('#signin2', { timeout: 10000 }).should('be.visible').click();  // Wait for the element to be visible
+      cy.get('#signin2', { timeout: 10000 }).should('be.visible').click();
       cy.get('#sign-username').type(randomUsername);
       cy.get('#sign-password').type(randomPassword);
       cy.get('button[onclick="register()"]').click();
